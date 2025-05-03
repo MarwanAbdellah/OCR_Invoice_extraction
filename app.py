@@ -10,7 +10,7 @@ st.markdown("<hr>", unsafe_allow_html=True)
 
 # 🎛️ Input Mode Selector
 st.markdown("### 🛠️ Select Input Method")
-input_mode = st.radio("", ["Upload Image", "Enter Text Manually"])
+input_mode = st.radio("Select input type:", ["Upload Image", "Enter Text Manually"], label_visibility="collapsed")
 
 def handle_invoice_processing(image_path=None, invoice_text=None):
     try:
