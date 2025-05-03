@@ -15,13 +15,6 @@ A Streamlit web app that extracts structured invoice data from images or raw tex
 
 ---
 
-## 🚀 Demo
-
-Try the live app:  
-<p align="center"><strong>🔗 <a href="https://ocrinvoiceextractor.streamlit.app/">Streamlit Cloud App (optional)</a></strong></p>
-
----
-
 ## 🛠️ Installation
 
 ### 1. Clone the repo
