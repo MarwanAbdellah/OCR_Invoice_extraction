@@ -1,5 +1,4 @@
 from langchain_google_genai import ChatGoogleGenerativeAI
-from langchain.prompts import FewShotChatMessagePromptTemplate
 from langchain_core.output_parsers import PydanticOutputParser
 from langchain_core.messages import HumanMessage, SystemMessage
 from pydantic import BaseModel, Field
@@ -42,12 +41,11 @@ class InvoiceData(BaseModel):
 
 parser = PydanticOutputParser(pydantic_object=InvoiceData)
 
-# Dummy few-shot setup (to be customized or loaded externally)
-few_shot_prompt = FewShotChatMessagePromptTemplate.from_examples(
-    examples=[],  # Add few-shot examples here if needed
-    example_prompt=None,  # Define if using
-    input_variables=[]
-)
+# Manually defined few-shot examples
+few_shot_prompt_messages = [
+    HumanMessage(content="Invoice Date: 2024-05-01\nBuyer: ABC Corp\nItems:\n1. Laptop - 2 pcs - $1000 each - Tax: 10%"),
+    SystemMessage(content='{"buyer_name": "ABC Corp", "invoice_date": "2024-05-01", "items": [{"item_name": "Laptop", "quantity": 2, "taxes": 0.10, "total_price": 2000.0}]}')
+]
 
 def process_invoice(image_path=None, invoice_text=None):
     messages = [
@@ -56,7 +54,6 @@ def process_invoice(image_path=None, invoice_text=None):
         )
     ]
 
-    few_shot_prompt_messages = few_shot_prompt.invoke({}).to_messages()
     messages.extend(few_shot_prompt_messages)
 
     if image_path:
