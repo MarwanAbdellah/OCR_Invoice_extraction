@@ -103,5 +103,5 @@ See [`LICENSE`](LICENSE) for more information.
 ## 📬 Contact
 
 For questions, suggestions, or collaborations:  
-**Your Name** – [your.email@example.com](mailto:marawan.abdellah0@gmail.com)  
-GitHub: [@yourusername](https://github.com/MarwanAbedllah)
+**Your Name** – [marawan.abdellah0@gmail.com](mailto:marawan.abdellah0@gmail.com)  
+GitHub: [@MarwanAbdellah](https://github.com/MarwanAbedllah)
