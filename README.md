@@ -104,4 +104,4 @@ See [`LICENSE`](LICENSE) for more information.
 
 For questions, suggestions, or collaborations:  
 **Your Name** – [marawan.abdellah0@gmail.com](mailto:marawan.abdellah0@gmail.com)  
-GitHub: [@MarwanAbdellah](https://github.com/MarwanAbedllah)
+GitHub: [@MarwanAbdellah](https://github.com/MarwanAbdellah)
